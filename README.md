@@ -66,7 +66,7 @@ use maree\elmWasl\elmWasl;
 elmWasl::registerCaptainsLocations($driverIdentityNumber='',$vehicleSequenceNumber='',$latitude=0.0,$longitude=0.0,$hasCustomer=true,$updatedWhen='');
 
 ```
-- note : you can use cron job to run that service every minute or you can execute that service inside update your driver locations api 'tracking drivers' to run every driver location changes
+- note : you can use cron job to run that service every minute or you can execute that service inside update your driver locations api 'tracking drivers' to run every time driver location changes
 
 ## note
 if you have problem with dates you can convert them like that
