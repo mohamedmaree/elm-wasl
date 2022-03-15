@@ -14,8 +14,8 @@ php artisan vendor:publish --provider="maree\elmWasl\ElmWaslServiceProvider" --t
 then change your elm-wasl config from config/elm-wasl.php file
 ```php
     "client-id" => "",//example ACD7A113-XXXX-4B68-B125-xxxxxxxxxx
-    "app-id"    => "" //example xd8e9xxx
-    "app-key"   => "" //example xx5784489c7147220924b4abb8xxxxxx
+    "app-id"    => "", //example xd8e9xxx
+    "app-key"   => "", //example xx5784489c7147220924b4abb8xxxxxx
 ```
 ## Usage
 
