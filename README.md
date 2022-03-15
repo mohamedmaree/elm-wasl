@@ -22,7 +22,7 @@ then change your elm-wasl config from config/elm-wasl.php file
 ## waslRegisterDriverAndCar
 - to send driver and car to elm
 ```php
-namespace maree\elmWasl;
+use maree\elmWasl\elmWasl;
 
 elmWasl::waslRegisterDriverAndCar($identityNumber='',$dateOfBirthGregorian='',$emailAddress='',$mobileNumber='',$sequenceNumber='',$plateLetters='',$plateNumbers='',$plateType='');
 
@@ -39,7 +39,7 @@ $plateTypes = ['1' => 'خصوصي' ,'2' => 'نقل عام' ,'3' => 'نقل خا�
 ## waslChechEligibility
 - to check if driver and car info that i sent to wasl accepted or refused or waiting
 ```php
-namespace maree\elmWasl;
+use maree\elmWasl\elmWasl;
 
 elmWasl::waslChechEligibility($identityNumber = '');
 
@@ -50,7 +50,7 @@ elmWasl::waslChechEligibility($identityNumber = '');
 ## registerTrip
 - to send trips that finished to wasl check first you sent that trip or no 
 ```php
-namespace maree\elmWasl;
+use maree\elmWasl\elmWasl;
 
 elmWasl::registerTrip($sequenceNumber ='',$driverId='',$tripId='',$distanceInMeters=0,$durationInSeconds=0,$customerRating=0.0,$customerWaitingTimeInSeconds=0,$originCityNameInArabic='',$destinationCityNameInArabic='',$originLatitude=0.0,$originLongitude=0.0,$destinationLatitude=0.0,$destinationLongitude=0.0,$pickupTimestamp='',$dropoffTimestamp='',$startedWhen='',$tripCost=0.0);
 
@@ -61,7 +61,7 @@ elmWasl::registerTrip($sequenceNumber ='',$driverId='',$tripId='',$distanceInMet
 ## registerCaptainsLocations
 - send moving captains updated locations
 ```php
-namespace maree\elmWasl;
+use maree\elmWasl\elmWasl;
 
 elmWasl::registerCaptainsLocations($driverIdentityNumber='',$vehicleSequenceNumber='',$latitude=0.0,$longitude=0.0,$hasCustomer=true,$updatedWhen='');
 
