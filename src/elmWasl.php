@@ -10,6 +10,7 @@ class elmWasl{
 		$plateLetterRight = (isset($letters[0]))? $letters[0] : '';
 		$plateLetterMiddle = (isset($letters[1]))? $letters[1] : '';
 		$plateLetterLeft = (isset($letters[2]))? $letters[2] : '';
+		$dateOfBirthGregorian = date('Y-m-d',strtotime($dateOfBirthGregorian));
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
 		CURLOPT_URL => "https://wasl.api.elm.sa/api/dispatching/v2/drivers",
