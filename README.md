@@ -78,7 +78,7 @@ if you have problem with dates you can convert them like that
 
 ## current elm wasl services :
 - waslRegisterDriverAndCar
-- waslChechEligibility
+- waslCheckEligibility
 - registerTrip
 - registerCaptainsLocations
 
