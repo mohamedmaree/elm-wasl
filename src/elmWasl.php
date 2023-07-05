@@ -7,9 +7,12 @@ class elmWasl{
 		$plateLetterMiddle = '';
 		$plateLetterLeft = ''; 
 		$letters = explode(' ', $plateLetters);
-		$plateLetterRight = (isset($letters[0]))? $letters[0] : '';
+		$letters = (count($letters) > 1 )? $letters : $plateLetters;
+		
+		$plateLetterLeft   = (isset($letters[0]))? $letters[0] : '';
 		$plateLetterMiddle = (isset($letters[1]))? $letters[1] : '';
-		$plateLetterLeft = (isset($letters[2]))? $letters[2] : '';
+		$plateLetterRight  = (isset($letters[2]))? $letters[2] : '';
+		
 		$dateOfBirthGregorian = date('Y-m-d',strtotime($dateOfBirthGregorian));
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
@@ -34,7 +37,7 @@ class elmWasl{
 		return json_decode($response);  
 	} 
 
-	public static function waslChechEligibility($identityNumber = ''){
+	public static function waslCheckEligibility($identityNumber = ''){
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
 		CURLOPT_URL => "https://wasl.api.elm.sa/api/dispatching/v2/drivers/eligibility/$identityNumber",
