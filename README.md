@@ -37,12 +37,12 @@ elmWasl::waslRegisterDriverAndCar($identityNumber='',$dateOfBirthGregorian='',$e
 $plateTypes = ['1' => 'خصوصي' ,'2' => 'نقل عام' ,'3' => 'نقل خاص' ,'4' => 'حافلة صغيرة عامة', '5' => 'حافلة صغيرة خاصة', '6' => 'اجرة' ,'7' => 'معدات ثقيلة', '8' => 'تصدير' ,'9' =>'دبلوماسي' ,'10' =>'دراجة نارية', '11' => 'مؤقت'];
 ```
 
-## waslChechEligibility
+## waslCheckEligibility
 - to check if driver and car info that i sent to wasl accepted or refused or waiting
 ```php
 use maree\elmWasl\elmWasl;
 
-elmWasl::waslChechEligibility($identityNumber = '');
+elmWasl::waslCheckEligibility($identityNumber = '');
 
 ```
 - note : you run this service by cron job every day or 12 hour to check if driver accepted or refused and update his status in your app
